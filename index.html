@@ -81,6 +81,25 @@
   footer { margin-top: 1.6rem; font-size: 0.85rem; color: var(--text-dim); }
   footer a { color: var(--accent-bright); }
 
+  /* --- Off duty: secondary, below the professional content --- */
+  .divider {
+    border: 0;
+    border-top: 1px solid var(--card-border);
+    margin: 1.8rem 0 1.1rem;
+  }
+  .offduty-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.7rem;
+  }
+  .offduty ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .offduty .card { min-height: 4.75rem; padding: 0.7rem 0.5rem; gap: 0.35rem; }
+  .offduty .card svg { width: 1.5rem; height: 1.5rem; opacity: 0.85; }
+  .offduty .card h2 { font-size: 0.92rem; }
+
   /* --- Wider screens: stacked rich cards, glyph left, desc + URL shown --- */
   @media (min-width: 41rem) {
     nav ul { grid-template-columns: 1fr; gap: 0.9rem; }
@@ -110,6 +129,20 @@
     .tagline { margin-bottom: 1.4rem; }
     .bio { margin-top: 2rem; }
     footer { margin-top: 2.25rem; }
+
+    /* Off duty stays a compact two-across row of slimmer cards */
+    .divider { margin: 2.4rem 0 1.2rem; }
+    .offduty ul { grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+    .offduty .card {
+      flex-direction: row; justify-content: flex-start;
+      padding: 0.75rem 0.9rem; gap: 0.75rem;
+      border-left-width: 3px; border-left-color: var(--card-border);
+    }
+    .offduty .card:hover, .offduty .card:focus-visible { border-left-color: var(--accent-bright); }
+    .offduty .card svg { width: 1.6rem; height: 1.6rem; }
+    .offduty .card h2 { font-size: 0.98rem; }
+    .offduty .card .desc { font-size: 0.84rem; margin: 0.1rem 0 0.25rem; }
+    .offduty .card .url { font-size: 0.76rem; }
   }
 
   /* Staggered reveal, echoing the portfolio's intro animation */
@@ -177,6 +210,32 @@
     demographic structure, and a full-stack software developer working extensively with
     agentic AI. Most of what I make and write lives on one of the sites above.
   </p>
+  <hr class="divider">
+  <nav class="offduty" aria-label="Off-duty sites">
+    <h2 class="offduty-title">Off duty</h2>
+    <ul>
+      <li>
+        <a class="card" href="https://food.jonminton.net/">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M9 8c0-1.5 1-1.5 1-3M14 8c0-1.5 1-1.5 1-3"/></svg>
+          <div class="txt">
+            <h2>Flow Kitchen</h2>
+            <p class="desc">Recipes drawn as flow diagrams — ingredients combining, step by step, into finished dishes.</p>
+            <span class="url">food.jonminton.net</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="https://games.jonminton.net/">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9h12a4 4 0 0 1 4 4v3a3 3 0 0 1-3 3c-1.5 0-2.5-1-3.5-2h-7C7.5 18 6.5 19 5 19a3 3 0 0 1-3-3v-3a4 4 0 0 1 4-4z"/><path d="M8 12v3M6.5 13.5h3"/><circle cx="16" cy="12.6" r="0.4" fill="currentColor"/><circle cx="18.2" cy="14.4" r="0.4" fill="currentColor"/></svg>
+          <div class="txt">
+            <h2>Games</h2>
+            <p class="desc">Three small browser games — a flat arena, a ring world, and a planet to delve into.</p>
+            <span class="url">games.jonminton.net</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </nav>
   <footer>
     Code and data at <a href="https://github.com/JonMinton" rel="me">github.com/JonMinton</a>.
   </footer>
