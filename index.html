@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jon Minton</title>
-<meta name="description" content="Jon Minton — statistician, data scientist, software developer, and agentic AI practitioner. Directory of my sites: blog, statistics course, portfolio, and how to get in touch.">
+<meta name="description" content="Jon Minton — founder of Knowledge Tree and Butterfly; statistician, data scientist, software developer, and agentic AI practitioner. Directory of my sites: the company, blog, statistics course, portfolio, and how to get in touch.">
 <link rel="canonical" href="https://jonminton.net/">
 <link rel="icon" href="/favicon.ico">
 <meta property="og:title" content="Jon Minton">
-<meta property="og:description" content="Statistician, data scientist, software developer. Blog, statistics course, portfolio, and contact routes.">
+<meta property="og:description" content="Founder of Knowledge Tree and Butterfly. Statistician, data scientist, software developer. Company site, blog, statistics course, portfolio, and contact routes.">
 <meta property="og:url" content="https://jonminton.net/">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,6 +71,8 @@
   .card svg { width: 2rem; height: 2rem; color: var(--accent-bright); flex: none; }
   .card h2 { font-size: 1rem; font-weight: 600; line-height: 1.2; }
   .card .desc, .card .url { display: none; }
+  .featured { grid-column: 1 / -1; }
+  .featured .card { border-color: var(--accent-bright); }
 
   .bio {
     color: var(--text-dim);
@@ -152,6 +154,7 @@
     .fade:nth-child(2) { animation-delay: 250ms; }
     .fade:nth-child(3) { animation-delay: 400ms; }
     .fade:nth-child(4) { animation-delay: 550ms; }
+    .fade:nth-child(5) { animation-delay: 700ms; }
     @keyframes fadeIn { to { opacity: 1; } }
   }
 </style>
@@ -162,6 +165,16 @@
   <p class="tagline">Statistician <span class="sep">&middot;</span> <span class="data-science">Data Scientist</span> <span class="sep">&middot;</span> <span class="software">Software Developer</span> <span class="sep">&middot;</span> <span class="agentic-ai">Agentic AI</span></p>
   <nav aria-label="Jon's sites">
     <ul>
+      <li class="fade featured">
+        <a class="card" href="https://ktandb.co.uk/">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-7"/><path d="M12 14c-3.5 0-6-2.2-6-5.2C6 5.6 8.7 3 12 3s6 2.6 6 5.8c0 3-2.5 5.2-6 5.2z"/><path d="M12 14l-3-3M12 11l3-3"/><path d="M4.5 17.5c1.2-1.8 3-1.6 3.5 0 .5-1.6 2.3-1.8 3.5 0-1.2 1.4-2.4 1.6-3.5.6-1.1 1-2.3.8-3.5-.6z"/></svg>
+          <div class="txt">
+            <h2>Knowledge Tree and Butterfly</h2>
+            <p class="desc">My company. Helping analytical workers gain the technical grounding to work with agentic AI, and developers gain analytical judgement. Free 20-minute consultations.</p>
+            <span class="url">ktandb.co.uk</span>
+          </div>
+        </a>
+      </li>
       <li class="fade">
         <a class="card" href="https://blog.jonminton.net/">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l4 4L7.5 20.5 3 21l.5-4.5L17 3z"/><path d="M14 6l4 4"/></svg>
@@ -205,10 +218,12 @@
     </ul>
   </nav>
   <p class="bio">
-    Hello — I'm Jon. I'm a senior statistician at the medical devices firm Smith &amp; Nephew,
-    a well-published and collaborative researcher specialising in epidemiology, risk, and
-    demographic structure, and a full-stack software developer working extensively with
-    agentic AI. Most of what I make and write lives on one of the sites above.
+    Hello — I'm Jon. I'm the founder of Knowledge Tree and Butterfly, a consultancy at the
+    seam between analytical work and software development. Before that I was a senior
+    statistician at Smith &amp; Nephew, and I remain a well-published and collaborative
+    researcher specialising in epidemiology, risk, and demographic structure, and a
+    full-stack software developer working extensively with agentic AI. Most of what I make
+    and write lives on one of the sites above.
   </p>
   <hr class="divider">
   <nav class="offduty" aria-label="Off-duty sites">
