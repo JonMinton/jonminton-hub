@@ -12,4 +12,4 @@ curl -X POST -H "Authorization: Bearer $NETLIFY_TOKEN" -H "Content-Type: applica
 
 (The token from `netlify login` lives in `~/Library/Preferences/netlify/config.json`. Alternatively link this repo to the Netlify site in the Netlify UI for auto-deploys.)
 
-DNS for jonminton.net is managed in Netlify DNS: apex + www + portfolio are Netlify sites; blog, stats, stats-board, food, and games are CNAME records to jonminton.github.io (GitHub Pages).
+DNS for jonminton.net is managed in Netlify DNS: apex + www + portfolio are Netlify sites; blog, stats, stats-board, food, and games are GitHub Pages sites. Since 2026-09-17 they use four A records (185.199.108-111.153) instead of a CNAME to jonminton.github.io, deliberately publishing no AAAA record: IPv6 connections to GitHub Pages were dying on some routes (see `docs/why-my-sites-were-slow.md`). If GitHub ever changes its Pages IPs, update these records. Pre-change snapshot: `docs/dns-snapshot-before-2026-09-17.json`.
